@@ -89,7 +89,7 @@ export default function Home() {
   return (
     <>
       {/* Background video and overlay */}
-      {showVideo && (
+      {showVideo && !videoError ? (
         <>
           <video
             autoPlay
@@ -97,19 +97,31 @@ export default function Home() {
             muted
             playsInline
             preload="none"
+            style={sharedStyles}
+            src="/background.mp4"
+            onError={() => setVideoError(true)}
+            onAbort={() => setVideoError(true)}
+            onStalled={() => setVideoError(true)}
+          />
+          <div
             style={{
               position: "fixed",
               top: 0,
               left: 0,
               width: "100vw",
               height: "100vh",
-              objectFit: "cover",
-              zIndex: -2,
-              opacity: 0.5,
-              transition: "opacity 3s",
-              filter: darkMode ? undefined : "invert(1)",
+              background: "rgba(0,0,0,0.1)",
+              zIndex: -1,
+              pointerEvents: "none",
             }}
-            src="/background.mp4"
+          />
+        </>
+      ) : (
+        <>
+          <img
+            src="/background-fallback.png"
+            alt="Background fallback"
+            style={sharedStyles}
           />
           <div
             style={{
@@ -125,6 +137,7 @@ export default function Home() {
           />
         </>
       )}
+
       <Navbar fixed="top" className="shadow-sm px-3">
         <div className="centered-navbar-content">
           <span
