@@ -51,6 +51,7 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
+  const [videoError, setVideoError] = useState(false);
 
   useEffect(() => {
     setShowVideo(true); // Lazy-load video on client only
@@ -86,21 +87,17 @@ export default function Home() {
   const projects = t("projects.list", { returnObjects: true });
   const showMoreLabel = t("ui.showMore");
 
-  const Background = ({ darkMode, showVideo }) => {
-    const [videoError, setVideoError] = useState(false);
-
-    const sharedStyles = {
-      position: "fixed",
-      top: 0,
-      left: 0,
-      width: "100vw",
-      height: "100vh",
-      objectFit: "cover",
-      zIndex: -2,
-      opacity: 0.5,
-      transition: "opacity 3s",
-      filter: darkMode ? undefined : "invert(1)",
-    };
+  const sharedStyles = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    objectFit: "cover",
+    zIndex: -2,
+    opacity: 0.5,
+    transition: "opacity 3s",
+    filter: darkMode ? undefined : "invert(1)",
   };
 
   return (
