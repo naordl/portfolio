@@ -1,7 +1,7 @@
 "use client";
 
 import "./i18n";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Container,
@@ -51,11 +51,18 @@ export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [showVideo, setShowVideo] = useState(false);
-  const [videoError, setVideoError] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     setShowVideo(true); // Lazy-load video on client only
   }, []);
+
+  // Handler for when video starts playing
+  const handleVideoPlay = () => setVideoPlaying(true);
+
+  // Handler for when video errors (e.g., autoplay blocked)
+  const handleVideoError = () => setVideoPlaying(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -103,53 +110,50 @@ export default function Home() {
   return (
     <>
       {/* Background video and overlay */}
-      {showVideo && !videoError ? (
-        <>
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="none"
-            style={sharedStyles}
-            src="/background.mp4"
-            onError={() => setVideoError(true)}
-            onAbort={() => setVideoError(true)}
-            onStalled={() => setVideoError(true)}
-          />
-          <div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100vw",
-              height: "100vh",
-              background: "rgba(0,0,0,0.1)",
-              zIndex: -1,
-              pointerEvents: "none",
-            }}
-          />
-        </>
-      ) : (
-        <>
-          <img
-            src="/background-fallback.png"
-            alt="Background fallback"
-            style={sharedStyles}
-          />
-          <div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100vw",
-              height: "100vh",
-              background: "rgba(0,0,0,0.1)",
-              zIndex: -1,
-              pointerEvents: "none",
-            }}
-          />
-        </>
+      {!videoPlaying && (
+        <img
+          src="/background-fallback.png"
+          alt="Background fallback"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            objectFit: "cover",
+            zIndex: -2,
+            transition: "opacity 3s",
+            filter: darkMode ? undefined : "invert(1)",
+          }}
+        />
+      )}
+
+      {/* Background video */}
+      {showVideo && (
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          onPlay={handleVideoPlay}
+          onError={handleVideoError}
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            objectFit: "cover",
+            zIndex: -2,
+            opacity: 0.5,
+            transition: "opacity 3s",
+            display: videoPlaying ? "block" : "none", // Only show video if playing
+            filter: darkMode ? undefined : "invert(1)",
+          }}
+          src="/background.mp4"
+        />
       )}
 
       <Navbar fixed="top" className="shadow-sm px-3">
