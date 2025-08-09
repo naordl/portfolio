@@ -1,0 +1,209 @@
+{
+  "navbar": {
+    "about": "About",
+    "skills": "Key Skills",
+    "projects": "Projects",
+    "achievements": "Honours & Awards",
+    "education": "Education",
+    "publications": "Publications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Roland Nemes",
+    "summary": "Entry-level DevOps Engineer with strong skills in AWS, Kubernetes, Linux systems administration, and automation, backed by a Master’s degree in Translation & Interpretation and a Bachelor’s degree in English Language & Literature. Experienced in designing and automating cloud infrastructure deployments, optimizing CI/CD workflows, and building production-ready applications. Actively developing BaseCAT, a professional Computer-Assisted Translation (CAT) tool using Next.js, Electron, and MongoDB, showcasing full-stack architecture capabilities. Adept at bridging development and operations to deliver scalable, high-quality engineering solutions.",
+    "location": "Based in Romania / EU – open to remote or hybrid roles in Hungary & Romania.",
+    "contacts": [
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/roland-nemes-089297330",
+        "icon": "bi-linkedin"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/naordl",
+        "icon": "bi-github"
+      }
+    ],
+    "languages": {
+      "title": "Languages",
+      "list": [
+        {
+          "label": "Hungarian (Native)"
+        },
+        {
+          "label": "English (C2)"
+        },
+        {
+          "label": "Romanian (B2)"
+        }
+      ]
+    }
+  },
+  "skills": {
+    "title": "Key Skills",
+    "list": [
+      {
+        "icon": "bi-cloud",
+        "title": "DevOps & Cloud",
+        "items": [
+          "AWS Services: IAM, EC2, S3, VPC, CloudFormation, CodePipeline, ECS, EKS",
+          "Kubernetes (K8s), Helm, Docker, IaC, Terraform",
+          "CI/CD Pipelines, Git, GitHub, Agile Workflows"
+        ]
+      },
+      {
+        "icon": "bi-hdd-network",
+        "title": "Systems Administration",
+        "items": [
+          "Linux Systems Administration",
+          "Shell Scripting (Bash, Posix)"
+        ]
+      },
+      {
+        "icon": "bi-code-slash",
+        "title": "Software Development",
+        "items": ["NodeJS, JavaScript, NextJS, SQLite, React"]
+      },
+      {
+        "icon": "bi-chat-dots",
+        "title": "Language & Communication",
+        "items": [
+          "Translation & Interpretation (HU ⇆ EN ⇆ RO)",
+          "Technical Documentation, API Documentation, Proofreading",
+          "MemoQ, Trados, Subtitle Edit"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "list": [
+      {
+        "id": "eks-quick-setup",
+        "icon": "bi-cloud-arrow-up",
+        "title": "AWS EKS Deployment Automation",
+        "description": "This project delivers a robust AWS CloudFormation template for deploying a scalable Kubernetes (EKS) cluster. It features integrated Prometheus and Grafana monitoring, and a fully automated CI/CD pipeline using AWS CodePipeline and GitHub. The solution enables zero-downtime deployments and scalable infrastructure provisioning, making it ideal for production environments.",
+        "images": [
+          "/images/eks-quick-setup-1.png",
+          "/images/eks-quick-setup-2.png"
+        ],
+        "features": [
+          "Production-ready CloudFormation template",
+          "EKS cluster with autoscaling",
+          "Integrated Prometheus and Grafana",
+          "Automated CI/CD with AWS CodePipeline"
+        ],
+        "github": "https://github.com/naordl/eks-quick-setup"
+      },
+      {
+        "id": "basecat",
+        "icon": "bi-window",
+        "title": "BaseCAT – CAT Tool (In Dev)",
+        "description": "BaseCAT is a professional Computer-Assisted Translation tool designed for translators and language professionals. Built with Next.js, Electron, and MongoDB, it offers secure authentication, project management, termbase and translation memory import/export, and a persistent tabbed interface for efficient workflow.",
+        "images": [
+          "/images/basecat-1.png",
+          "/images/basecat-2.png",
+          "/images/basecat-3.png",
+          "/images/basecat-4.png",
+          "/images/basecat-5.png"
+        ],
+        "features": [
+          "Production-grade authentication (bcrypt, JWT, MongoDB, Keytar)",
+          "Project management: creation, dashboard, details editing, archiving, recycle bin",
+          "Termbase (CSV) and Translation Memory (TMX) import/export",
+          "Document import and HTML conversion with Pandoc for in-app preview",
+          "Persistent tabbed interface (projects, documents, dashboard) with sidebar navigation",
+          "Auto-login with hashed tokens restored on restart"
+        ]
+      },
+      {
+        "id": "discuss",
+        "icon": "bi-chat-left-dots",
+        "title": "Reddit Clone (Full-Stack App)",
+        "description": "A full-stack Reddit-style web application built with NextJS and SQLite. Features include user authentication, post creation, commenting, and a modern, responsive UI.",
+        "images": [
+          "/images/discuss-1.png",
+          "/images/discuss-2.png",
+          "/images/discuss-3.png"
+        ],
+        "github": "https://github.com/naordl/discuss"
+      },
+      {
+        "id": "ecomm",
+        "icon": "bi-bag-check",
+        "title": "E-Commerce Application",
+        "description": "A NodeJS-based e-commerce backend built with Express. Includes product management, shopping cart, and checkout functionality, designed for scalability and easy integration with frontend frameworks.",
+        "images": ["/images/ecomm-1.png", "/images/ecomm-2.png"],
+        "github": "https://github.com/naordl/ecomm"
+      },
+      {
+        "id": "arch-bootstrap",
+        "icon": "bi-terminal-dash",
+        "title": "Arch Linux Bootstrapper",
+        "description": "A Bash-based automation script that streamlines the installation and setup of Arch Linux. Designed for advanced users, it reduces setup time and ensures a consistent environment.",
+        "images": [
+          "/images/arch-bootstrap-1.png",
+          "/images/arch-bootstrap-2.png"
+        ],
+        "github": "https://github.com/naordl/arch-bootstrap"
+      },
+      {
+        "id": "dotfiles",
+        "icon": "bi-gear-wide-connected",
+        "title": "Dotfiles & Configurations",
+        "description": "A collection of personal dotfiles and configuration scripts for Linux and development environments. Includes settings for shell, editors, and various tools to boost productivity.",
+        "images": ["/images/dotfiles-1.png"],
+        "github": "https://github.com/naordl/dotfiles"
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Honours & Awards",
+    "list": [
+      "1st Place – English Language & Literature Section — 27th Student Conference, PCU (2024)",
+      "1st Place – English Language & Literature Section — 25th Student Conference, PCU (2022)",
+      "Certificate of Contribution — Publicritic International Award & Exhibition (2023)",
+      "Certificate of Participation — ELT Regional Conference (2023)"
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "list": [
+      "MA – Translation and Interpretation — Partium Christian University, Oradea (2022–2024)",
+      "BA – English Language and Literature — Partium Christian University, Oradea (2019–2022)"
+    ]
+  },
+  "publications": {
+    "title": "Publications",
+    "name": "“Mushroom Viewpoint” – O(u)radea, bilingual tourist guide (EN & HU)",
+    "links": [
+      {
+        "label": "en.partium.ro/en/news/mushroom-viewpoint",
+        "url": "https://en.partium.ro/en/news/mushroom-viewpoint"
+      },
+      {
+        "label": "en.partium.ro/hu/hirek/gomba-kilato",
+        "url": "https://en.partium.ro/hu/hirek/gomba-kilato"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "If you’d like to request my full CV or talk about a potential opportunity, feel free to send me a message using the form below. I’ll get back to you as soon as I can.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Thank you! Your message has been sent.",
+      "error": "Oops! Something went wrong. Please try again later.",
+      "validation": {
+        "required": "Please fill out all fields.",
+        "invalidEmail": "Please enter a valid email address."
+      }
+    }
+  },
+  "ui": {
+    "showMore": "Show more"
+  }
+}
