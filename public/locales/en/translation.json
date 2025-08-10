@@ -11,7 +11,7 @@
   },
   "hero": {
     "name": "Roland Nemes",
-    "summary": "Entry-level DevOps Engineer passionate about building reliable, automated, and scalable infrastructure. I bring strong AWS, Kubernetes, and Linux skills, combined with a unique background in language and technical communication. My DevOps journey began with personal projects that solved real deployment and automation challenges. I’m committed to bridging development and operations through clean workflows, clear documentation, and continuous improvement.",
+    "summary": "Entry-level DevOps Engineer passionate about building reliable, automated, and scalable infrastructure. I bring strong AWS, Kubernetes, and Linux skills, combined with a unique background in linguistics and translation. My DevOps journey began with personal projects that solved real deployment and automation challenges. I’m committed to bridging development and operations through clean workflows, clear documentation, and continuous improvement.",
     "location": "Based in EU – open to remote or hybrid roles in Hungary & Romania.",
     "contacts": [
       {
@@ -100,7 +100,7 @@
           "problem": "Manual infrastructure setup was slow and prone to error.",
           "solution": "Built a production-ready AWS CloudFormation template that deploys a scalable Kubernetes cluster (EKS) with integrated monitoring (Prometheus, Grafana) and automated CI/CD via AWS CodePipeline and GitHub.",
           "result": "Zero-downtime deployments and reduced provisioning time from hours to minutes.",
-          "learned": "Deepened skills in infrastructure-as-code and automated workflows."
+          "learned": "Deepened skills in infrastructure-as-code (IaC) and automated workflows."
         },
         "stack": [
           "AWS",
@@ -217,7 +217,7 @@
       "title": "Skills Journey",
       "events": [
         {
-          "year": "2022",
+          "year": "2022-2023",
           "text": "Began learning the Linux OS and shell scripting."
         },
         {
