@@ -94,6 +94,19 @@ export default function Home() {
   const projects = t("projects.list", { returnObjects: true });
   const showMoreLabel = t("ui.showMore");
 
+  const sharedStyles = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100vw",
+    height: "100vh",
+    objectFit: "cover",
+    zIndex: -2,
+    opacity: 0.5,
+    transition: "opacity 3s",
+    filter: darkMode ? undefined : "invert(1)",
+  };
+
   return (
     <>
       {/* Background video and overlay */}
