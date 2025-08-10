@@ -12,7 +12,7 @@
   "hero": {
     "name": "Roland Nemes",
     "summary": "Entry-level DevOps Engineer passionate about building reliable, automated, and scalable infrastructure. I bring strong AWS, Kubernetes, and Linux skills, combined with a unique background in language and technical communication. My DevOps journey began with personal projects that solved real deployment and automation challenges. I’m committed to bridging development and operations through clean workflows, clear documentation, and continuous improvement.",
-    "location": "Based in Romania / EU – open to remote or hybrid roles in Hungary & Romania.",
+    "location": "Based in EU – open to remote or hybrid roles in Hungary & Romania.",
     "contacts": [
       {
         "label": "LinkedIn",
@@ -47,7 +47,7 @@
         "icon": "bi-cloud",
         "title": "DevOps & Cloud",
         "items": [
-          "AWS Services (IAM, EC2, S3, VPC, CloudFormation, CodePipeline, ECS, EKS) — used to automate deployments and manage cloud infrastructure.",
+          "AWS Services (IAM, EC2, S3, VPC, CloudFormation, CodePipeline, EKS) — used to automate deployments and manage cloud infrastructure.",
           "Kubernetes, Helm, Docker — used to deploy and manage scalable containerized applications.",
           "CI/CD Pipelines, Git, GitHub — streamlined release cycles for faster, safer deployments."
         ]
@@ -56,7 +56,8 @@
         "icon": "bi-hdd-network",
         "title": "Linux",
         "items": [
-          "Shell Scripting (Bash, Posix) — automated repetitive tasks to save hours of manual work."
+          "Shell Scripting (Bash, Posix) — automated repetitive tasks to save hours of manual work.",
+          "Cronjobs - scheduled tasks for maintenance, backups, and convenience."
         ]
       },
       {
@@ -124,7 +125,7 @@
         "title": "BaseCAT – CAT Tool (In Dev)",
         "description": {
           "problem": "Existing CAT tools feel bloated and unintuitive for some translators.",
-          "solution": "Design and develop a cross-platform CAT tool with a clean interface, secure authentication, and powerful import/export features.",
+          "solution": "Designing and developing a cross-platform CAT tool with a clean interface, secure authentication, and powerful import/export features.",
           "result": "Creating a leaner, more efficient workflow for translators.",
           "learned": "Full-stack architecture, secure authentication flows, and UI/UX optimization for productivity."
         },
@@ -151,7 +152,7 @@
         "title": "Reddit Clone (Full-Stack App)",
         "description": {
           "problem": "Needed a sandbox to practice full-stack CRUD operations and authentication.",
-          "solution": "Built a Reddit-style app with Next.js and SQLite, featuring user authentication, posts, and comments.",
+          "solution": "Built a Reddit-style app with Next.js and SQLite.",
           "result": "Functional platform with user authentication, posts, and comments.",
           "learned": "Handling user data securely, building responsive UIs, backend form validation."
         },
@@ -200,7 +201,7 @@
         "title": "Dotfiles & Configurations",
         "description": {
           "problem": "Inconsistent dev environments across machines.",
-          "solution": "Maintained a central repository of dotfiles and config scripts.",
+          "solution": "Maintain a central repository of dotfiles and config scripts.",
           "result": "Consistent workflows and faster environment setup.",
           "learned": "Version-controlling configs and cross-system compatibility."
         },
@@ -243,7 +244,7 @@
     "nextSteps": {
       "title": "Next Steps",
       "items": [
-        "In the immediate future, I’m focused on securing my first role in DevOps where I can apply my skills, continue learning, and grow into a valuable team member."
+        "In the immediate future, I’m focused on securing my first role as an Entry-level/Junior DevOps Engineer where I can apply my skills, continue learning, and grow into a valuable team member."
       ]
     }
   },
