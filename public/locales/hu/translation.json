@@ -1,1 +1,294 @@
-{}
+{
+  "navbar": {
+    "about": "Rólam",
+    "skills": "Szakmai készségek",
+    "projects": "Projektek",
+    "timeline": "Szakmai idővonal",
+    "achievements": "Kitüntetések",
+    "education": "Tanulmányok",
+    "publications": "Publikációk",
+    "contact": "Kapcsolatfelvétel"
+  },
+  "hero": {
+    "name": "Nemes Roland",
+    "summary": "Pályakezdő DevOps mérnök vagyok, szakmai fókuszom a megbízható, automatizált, és könnyen skálázható infrastruktúrák tervezése és üzemeltetése. Jelentős AWS-, Kubernetes- és Linux-gyakorlattal rendelkezem, amelyet nyelvészeti és fordító-tolmács háttér egészít ki. A DevOps területére saját fejlesztésű projektek révén léptem be, amelyek valós környezetben oldottak meg telepítési és automatizálási problémákat. Elkötelezett célom a fejlesztési és üzemeltetési folyamatok integrálása átlátható munkafolyamatokkal, precíz dokumentációval és folyamatos fejlődéssel.",
+    "location": "EU-ban tartózkodom. Nyitott vagyok távoli (remote) vagy hibrid (hybrid) munkalehetőségekre Magyarországon és Romániában.",
+    "contacts": [
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/roland-nemes-089297330",
+        "icon": "bi-linkedin"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/naordl",
+        "icon": "bi-github"
+      }
+    ],
+    "languages": {
+      "title": "Nyelvi kompetenciák",
+      "list": [
+        { "label": "Magyar (anyanyelvi szint)" },
+        { "label": "Angol – felsőfok (C2)" },
+        { "label": "Román – középfok (B2)" }
+      ]
+    }
+  },
+  "skills": {
+    "title": "Szakmai készségek",
+    "list": [
+      {
+        "icon": "bi-cloud",
+        "title": "DevOps és Cloud",
+        "items": [
+          "AWS szolgáltatások (IAM, EC2, S3, VPC, CloudFormation, CodePipeline, EKS) – infrastruktúra automatizálása és felhőalapú rendszerek menedzselése.",
+          "Kubernetes, Helm, Docker – konténerizált, nagy rendelkezésre állású alkalmazások telepítése és karbantartása.",
+          "CI/CD folyamatok, Git, GitHub – kiadási ciklusok optimalizálása a gyorsabb és biztonságosabb üzembe helyezés érdekében."
+        ]
+      },
+      {
+        "icon": "bi-hdd-network",
+        "title": "Linux",
+        "items": [
+          "Shell szkriptelés (Bash, Posix) – ismétlődő folyamatok automatizálása, jelentős manuális erőforrás-megtakarítással.",
+          "Cronjob-ok – karbantartási, mentési feladatok időzítése."
+        ]
+      },
+      {
+        "icon": "bi-code-slash",
+        "title": "Szoftverfejlesztés",
+        "items": [
+          "NodeJS",
+          "JavaScript, TypeScript",
+          "NextJS",
+          "React",
+          "Teljes értékű, reszponzív felhasználói felülettel és megbízható szerveroldali architektúrával rendelkező alkalmazások fejlesztése."
+        ]
+      },
+      {
+        "icon": "bi-chat-dots",
+        "title": "Nyelv és kommunikáció",
+        "items": [
+          "Fordítás és tolmácsolás (HU ⇆ EN ⇆ RO) – gördülékeny kommunikációs készségek többnyelvű, nemzetközi munkakörnyezetben.",
+          "Műszaki és API dokumentáció készítése, lektorálás – komplex rendszerek érthető és precíz dokumentálása.",
+          "MemoQ, Trados, Subtitle Edit – tapasztalat ipari szintű fordítástámogató (CAT) eszközökkel."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projektek",
+    "stackLabel": "Technológiai környezet:",
+    "descriptionLabels": {
+      "problem": "Probléma",
+      "solution": "Megoldás",
+      "result": "Eredmény",
+      "learned": "Tanulság"
+    },
+    "list": [
+      {
+        "id": "eks-quick-setup",
+        "icon": "bi-cloud-arrow-up",
+        "title": "AWS EKS automatizálása",
+        "description": {
+          "problem": "A manuális infrastruktúra-telepítés időigényes volt és nagy hibakockázattal járt.",
+          "solution": "Fejlesztettem egy production környezetre kész AWS CloudFormation sablont, amely automatikusan létrehoz egy skálázható Kubernetes klasztert (EKS) beépített megfigyelőrendszerrel (Prometheus, Grafana) és teljes CI/CD integrációval AWS CodePipeline és GitHub segítségével.",
+          "result": "Nulla állásidős telepítések, és a telepítési idő csökkentése órákról percekre.",
+          "learned": "Infrastruktúra mint kód (IaC) és automatizált munkafolyamatok mélyebb elsajátítása."
+        },
+        "stack": [
+          "AWS",
+          "CloudFormation",
+          "CodePipeline",
+          "Kubernetes",
+          "Docker",
+          "Helm",
+          "Prometheus",
+          "Grafana",
+          "Git"
+        ],
+        "images": [
+          "/images/eks-quick-setup-1.png",
+          "/images/eks-quick-setup-2.png"
+        ],
+        "github": "https://github.com/naordl/eks-quick-setup"
+      },
+      {
+        "id": "basecat",
+        "icon": "bi-window",
+        "title": "BaseCAT – CAT eszköz (fejlesztés alatt)",
+        "description": {
+          "problem": "A jelenlegi fordítástámogató rendszerek sok felhasználó számára túlzsúfoltak és kevéssé intuitívak.",
+          "solution": "Többplatformos Computer Assisted Translation alkalmazás fejlesztése letisztult felhasználói felülettel, biztonságos felhasználói belépés mechanizmusokkal és hatékony import/export képességekkel.",
+          "result": "Hatékonyabb és átláthatóbb munkafolyamat biztosítása a fordítói közösség számára.",
+          "learned": "Full-stack architektúra megtervezése, biztonságos hitelesítési folyamatok kialakítása és UI/UX optimalizálás a produktivitás növelése érdekében."
+        },
+        "stack": [
+          "Next.js",
+          "Electron",
+          "MongoDB",
+          "bcrypt",
+          "JWT",
+          "Keytar",
+          "Pandoc"
+        ],
+        "images": [
+          "/images/basecat-1.png",
+          "/images/basecat-2.png",
+          "/images/basecat-3.png",
+          "/images/basecat-4.png",
+          "/images/basecat-5.png"
+        ]
+      },
+      {
+        "id": "discuss",
+        "icon": "bi-chat-left-dots",
+        "title": "Reddit-klón – full-stack alkalmazás",
+        "description": {
+          "problem": "Gyakorlati környezetre volt szükségem a CRUD műveletek és felhasználói hitelesítés elsajátításához.",
+          "solution": "Reddit stílusú közösségi alkalmazás fejlesztése Next.js és SQLite alapokon.",
+          "result": "Teljes funkcionalitású platform, felhasználói regisztrációval, bejegyzés- és kommentkezeléssel.",
+          "learned": "Felhasználói adatkezelés biztonságos megvalósítása, reszponzív UI építése és backend űrlap-validáció fejlesztése."
+        },
+        "stack": ["Next.js", "SQLite", "TypeScript", "React", "TailwindCSS"],
+        "images": [
+          "/images/discuss-1.png",
+          "/images/discuss-2.png",
+          "/images/discuss-3.png"
+        ],
+        "github": "https://github.com/naordl/discuss"
+      },
+      {
+        "id": "ecomm",
+        "icon": "bi-bag-check",
+        "title": "E-kereskedelmi alkalmazás",
+        "description": {
+          "problem": "Backend API tervezést akartam elsajátítani a kereskedelmi munkafolyamatokhoz.",
+          "solution": "Express keretrendszerre épített backend létrehozása termékkatalógus, bevásárlókosár és fizetési modul kezelésére.",
+          "result": "Moduláris, skálázható backend architektúra, amely készen áll a frontend integrációra.",
+          "learned": "API architektúra tervezése és adatbázis-kezelési megoldások implementálása."
+        },
+        "stack": ["Node.js", "Express", "JavaScript"],
+        "images": ["/images/ecomm-1.png", "/images/ecomm-2.png"],
+        "github": "https://github.com/naordl/ecomm"
+      },
+      {
+        "id": "arch-bootstrap",
+        "icon": "bi-terminal-dash",
+        "title": "Arch Linux automatizált telepítő",
+        "description": {
+          "problem": "Ismételt Arch Linux telepítések jelentős időráfordítást igényeltek.",
+          "solution": "Bash szkript írása a telepítési és konfigurációs folyamatok teljes automatizálására.",
+          "result": "Telepítési idő drasztikus csökkentése és egységes fejlesztői környezet kialakítása.",
+          "learned": "Shell szkriptelési best practice-ek és Linux környezet automatizálása."
+        },
+        "stack": ["Bash", "Linux", "Git"],
+        "images": [
+          "/images/arch-bootstrap-1.png",
+          "/images/arch-bootstrap-2.png"
+        ],
+        "github": "https://github.com/naordl/arch-bootstrap"
+      },
+      {
+        "id": "dotfiles",
+        "icon": "bi-gear-wide-connected",
+        "title": "Dotfile-ok és konfigurációk",
+        "description": {
+          "problem": "Különböző fejlesztői gépeken eltérő környezeti beállításaim voltak.",
+          "solution": "Központi verziókezelt repo fenntartása dotfile-ok és konfigurációs szkriptek számára.",
+          "result": "Egységes munkakörnyezet és gyorsabb rendszerbeállítás biztosítása.",
+          "learned": "Konfigurációk verziókezelése és platformközi kompatibilitás megvalósítása."
+        },
+        "stack": ["Bash", "Linux", "Git"],
+        "images": ["/images/dotfiles-1.png"],
+        "github": "https://github.com/naordl/dotfiles"
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Szakmai idővonal",
+    "journey": {
+      "title": "Készségek fejlődése",
+      "events": [
+        {
+          "year": "2022-2023",
+          "text": "A Linux operációs rendszer és a shell szkriptelés alapjainak elsajátítása."
+        },
+        {
+          "year": "2024",
+          "text": "Belépés a felhőalapú számítástechnika világába AWS környezetben; első CI/CD folyamat felépítése."
+        },
+        {
+          "year": "2024",
+          "text": "Kubernetes klaszterek telepítése AWS EKS-en; monitorozási képességeim fejlesztése, Prometheus és Grafana eszközökkel."
+        },
+        {
+          "year": "2025",
+          "text": "A BaseCAT alkalmazás fejlesztésének megkezdése teljes stack architektúrában."
+        }
+      ]
+    },
+    "currentlyLearning": {
+      "title": "Folyamatban lévő tanulmányok",
+      "items": [
+        "Terraform alkalmazása többfelhős környezetek kiépítésére és menedzselésére.",
+        "Ansible használata többfelhős rendszerek konfigurációjának automatizálására."
+      ]
+    },
+    "nextSteps": {
+      "title": "Következő lépések",
+      "items": [
+        "Elsődleges célom rövid távon egy Entry-level/Junior DevOps mérnöki pozíció betöltése, ahol a megszerzett tudást éles környezetben alkalmazhatom, folyamatosan fejlődhetek, és értékes tagja lehetek a csapatnak."
+      ]
+    }
+  },
+  "achievements": {
+    "title": "Kitüntetések",
+    "list": [
+      "1. hely – Angol nyelv és irodalom szekció — 27. Partiumi Tudományos Diákköri Konferencia, PKE (2024) – Műszaki kutatási és prezentációs készségek miatti elismerés.",
+      "1. hely – Angol nyelv és irodalom szekció — 25. Partiumi Tudományos Diákköri Konferencia, PKE (2022) – Elismerés világos kommunikációért és strukturált elemzésért.",
+      "Közreműködői Oklevél — Publicritic Nemzetközi Vizuális Kritikaformálói Díj és Kiállítás (2023) – Többnyelvű anyagok fordítása és lektorálása.",
+      "Részvételi oklevél — ELT Regionális Konferencia (2023) – Részvétel tanítással kapcsolatos szakmai megbeszéléseken."
+    ]
+  },
+  "education": {
+    "title": "Tanulmányok",
+    "list": [
+      "Mesterképzés (MA) – Fordító és tolmács, Partiumi Keresztény Egyetem, Nagyvárad (2022–2024)",
+      "Alapképzés (BA) – Angol nyelv és irodalom, Partiumi Keresztény Egyetem, Nagyvárad (2019–2022)"
+    ]
+  },
+  "publications": {
+    "title": "Publikációk",
+    "name": "„Gomba-kilátó” – O(u)radea kötetből, kétnyelvű turisztikai útikalauz (angol és magyar nyelven)",
+    "links": [
+      {
+        "label": "en.partium.ro/en/news/mushroom-viewpoint",
+        "url": "https://en.partium.ro/en/news/mushroom-viewpoint"
+      },
+      {
+        "label": "en.partium.ro/hu/hirek/gomba-kilato",
+        "url": "https://en.partium.ro/hu/hirek/gomba-kilato"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kapcsolatfelvétel",
+    "description": "Ha szeretné megkapni a teljes önéletrajzomat, vagy megbeszélni egy DevOps lehetőséget, kérem, írjon nekem az alábbi űrlapon. Szívesen átbeszélem, hogyan tudnám támogatni és erősíteni a csapatát.",
+    "form": {
+      "name": "Név",
+      "email": "E-mail cím",
+      "message": "Üzenet",
+      "submit": "Üzenet küldése",
+      "success": "Köszönöm! Az üzenet sikeresen elküldve.",
+      "error": "Hiba történt az üzenetküldés során. Kérlek, próbáld meg később.",
+      "validation": {
+        "required": "Minden mező kitöltése kötelező.",
+        "invalidEmail": "Kérem adjon meg egy érvényes e-mail címet."
+      }
+    }
+  },
+  "ui": {
+    "showMore": "Továbbiak megjelenítése"
+  }
+}
