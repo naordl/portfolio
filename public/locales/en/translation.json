@@ -3,6 +3,7 @@
     "about": "About",
     "skills": "Key Skills",
     "projects": "Projects",
+    "timeline": "Timeline",
     "achievements": "Honours & Awards",
     "education": "Education",
     "publications": "Publications",
@@ -10,7 +11,7 @@
   },
   "hero": {
     "name": "Roland Nemes",
-    "summary": "Entry-level DevOps Engineer with strong skills in AWS, Kubernetes, Linux systems administration, and automation, backed by a Master’s degree in Translation & Interpretation and a Bachelor’s degree in English Language & Literature. Experienced in designing and automating cloud infrastructure deployments, optimizing CI/CD workflows, and building production-ready applications. Actively developing BaseCAT, a professional Computer-Assisted Translation (CAT) tool using Next.js, Electron, and MongoDB, showcasing full-stack architecture capabilities. Adept at bridging development and operations to deliver scalable, high-quality engineering solutions.",
+    "summary": "Entry-level DevOps Engineer passionate about building reliable, automated, and scalable infrastructure. I bring strong AWS, Kubernetes, and Linux skills, combined with a unique background in language and technical communication. My DevOps journey began with personal projects that solved real deployment and automation challenges. I’m committed to bridging development and operations through clean workflows, clear documentation, and continuous improvement.",
     "location": "Based in Romania / EU – open to remote or hybrid roles in Hungary & Romania.",
     "contacts": [
       {
@@ -46,52 +47,74 @@
         "icon": "bi-cloud",
         "title": "DevOps & Cloud",
         "items": [
-          "AWS Services: IAM, EC2, S3, VPC, CloudFormation, CodePipeline, ECS, EKS",
-          "Kubernetes (K8s), Helm, Docker, IaC, Terraform",
-          "CI/CD Pipelines, Git, GitHub, Agile Workflows"
+          "AWS Services (IAM, EC2, S3, VPC, CloudFormation, CodePipeline, ECS, EKS) — used to automate deployments and manage cloud infrastructure.",
+          "Kubernetes, Helm, Docker — used to deploy and manage scalable containerized applications.",
+          "CI/CD Pipelines, Git, GitHub — streamlined release cycles for faster, safer deployments."
         ]
       },
       {
         "icon": "bi-hdd-network",
-        "title": "Systems Administration",
+        "title": "Linux",
         "items": [
-          "Linux Systems Administration",
-          "Shell Scripting (Bash, Posix)"
+          "Shell Scripting (Bash, Posix) — automated repetitive tasks to save hours of manual work."
         ]
       },
       {
         "icon": "bi-code-slash",
         "title": "Software Development",
-        "items": ["NodeJS, JavaScript, NextJS, SQLite, React"]
+        "items": [
+          "NodeJS",
+          "JavaScript, TypeScript",
+          "NextJS",
+          "React",
+          "Built full-stack apps with responsive UIs and robust backends."
+        ]
       },
       {
         "icon": "bi-chat-dots",
         "title": "Language & Communication",
         "items": [
-          "Translation & Interpretation (HU ⇆ EN ⇆ RO)",
-          "Technical Documentation, API Documentation, Proofreading",
-          "MemoQ, Trados, Subtitle Edit"
+          "Translation & Interpretation (HU ⇆ EN ⇆ RO) — adept at communication in multilingual teams.",
+          "Technical Documentation, API Documentation, Proofreading — can write clear and accurate documentation for complex systems.",
+          "MemoQ, Trados, Subtitle Edit — experience with professional CAT tools."
         ]
       }
     ]
   },
   "projects": {
     "title": "Projects",
+    "stackLabel": "Tech Stack:",
+    "descriptionLabels": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "result": "Result",
+      "learned": "Learned"
+    },
     "list": [
       {
         "id": "eks-quick-setup",
         "icon": "bi-cloud-arrow-up",
         "title": "AWS EKS Deployment Automation",
-        "description": "This project delivers a robust AWS CloudFormation template for deploying a scalable Kubernetes (EKS) cluster. It features integrated Prometheus and Grafana monitoring, and a fully automated CI/CD pipeline using AWS CodePipeline and GitHub. The solution enables zero-downtime deployments and scalable infrastructure provisioning, making it ideal for production environments.",
+        "description": {
+          "problem": "Manual infrastructure setup was slow and prone to error.",
+          "solution": "Built a production-ready AWS CloudFormation template that deploys a scalable Kubernetes cluster (EKS) with integrated monitoring (Prometheus, Grafana) and automated CI/CD via AWS CodePipeline and GitHub.",
+          "result": "Zero-downtime deployments and reduced provisioning time from hours to minutes.",
+          "learned": "Deepened skills in infrastructure-as-code and automated workflows."
+        },
+        "stack": [
+          "AWS",
+          "CloudFormation",
+          "CodePipeline",
+          "Kubernetes",
+          "Docker",
+          "Helm",
+          "Prometheus",
+          "Grafana",
+          "Git"
+        ],
         "images": [
           "/images/eks-quick-setup-1.png",
           "/images/eks-quick-setup-2.png"
-        ],
-        "features": [
-          "Production-ready CloudFormation template",
-          "EKS cluster with autoscaling",
-          "Integrated Prometheus and Grafana",
-          "Automated CI/CD with AWS CodePipeline"
         ],
         "github": "https://github.com/naordl/eks-quick-setup"
       },
@@ -99,28 +122,40 @@
         "id": "basecat",
         "icon": "bi-window",
         "title": "BaseCAT – CAT Tool (In Dev)",
-        "description": "BaseCAT is a professional Computer-Assisted Translation tool designed for translators and language professionals. Built with Next.js, Electron, and MongoDB, it offers secure authentication, project management, termbase and translation memory import/export, and a persistent tabbed interface for efficient workflow.",
+        "description": {
+          "problem": "Existing CAT tools feel bloated and unintuitive for some translators.",
+          "solution": "Design and develop a cross-platform CAT tool with a clean interface, secure authentication, and powerful import/export features.",
+          "result": "Creating a leaner, more efficient workflow for translators.",
+          "learned": "Full-stack architecture, secure authentication flows, and UI/UX optimization for productivity."
+        },
+        "stack": [
+          "Next.js",
+          "Electron",
+          "MongoDB",
+          "bcrypt",
+          "JWT",
+          "Keytar",
+          "Pandoc"
+        ],
         "images": [
           "/images/basecat-1.png",
           "/images/basecat-2.png",
           "/images/basecat-3.png",
           "/images/basecat-4.png",
           "/images/basecat-5.png"
-        ],
-        "features": [
-          "Production-grade authentication (bcrypt, JWT, MongoDB, Keytar)",
-          "Project management: creation, dashboard, details editing, archiving, recycle bin",
-          "Termbase (CSV) and Translation Memory (TMX) import/export",
-          "Document import and HTML conversion with Pandoc for in-app preview",
-          "Persistent tabbed interface (projects, documents, dashboard) with sidebar navigation",
-          "Auto-login with hashed tokens restored on restart"
         ]
       },
       {
         "id": "discuss",
         "icon": "bi-chat-left-dots",
         "title": "Reddit Clone (Full-Stack App)",
-        "description": "A full-stack Reddit-style web application built with NextJS and SQLite. Features include user authentication, post creation, commenting, and a modern, responsive UI.",
+        "description": {
+          "problem": "Needed a sandbox to practice full-stack CRUD operations and authentication.",
+          "solution": "Built a Reddit-style app with Next.js and SQLite, featuring user authentication, posts, and comments.",
+          "result": "Functional platform with user authentication, posts, and comments.",
+          "learned": "Handling user data securely, building responsive UIs, backend form validation."
+        },
+        "stack": ["Next.js", "SQLite", "TypeScript", "React", "TailwindCSS"],
         "images": [
           "/images/discuss-1.png",
           "/images/discuss-2.png",
@@ -132,7 +167,13 @@
         "id": "ecomm",
         "icon": "bi-bag-check",
         "title": "E-Commerce Application",
-        "description": "A NodeJS-based e-commerce backend built with Express. Includes product management, shopping cart, and checkout functionality, designed for scalability and easy integration with frontend frameworks.",
+        "description": {
+          "problem": "Needed to understand backend API design for commerce workflows.",
+          "solution": "Developed an Express-based backend for product management, shopping cart, and checkout.",
+          "result": "Modular, scalable backend ready for frontend integration.",
+          "learned": "API architecture and database interactions."
+        },
+        "stack": ["Node.js", "Express", "JavaScript"],
         "images": ["/images/ecomm-1.png", "/images/ecomm-2.png"],
         "github": "https://github.com/naordl/ecomm"
       },
@@ -140,7 +181,13 @@
         "id": "arch-bootstrap",
         "icon": "bi-terminal-dash",
         "title": "Arch Linux Bootstrapper",
-        "description": "A Bash-based automation script that streamlines the installation and setup of Arch Linux. Designed for advanced users, it reduces setup time and ensures a consistent environment.",
+        "description": {
+          "problem": "Repeated Arch Linux setups wasted time.",
+          "solution": "Wrote a Bash script to automate installation and configuration.",
+          "result": "Reduced setup time dramatically and ensured consistent environments.",
+          "learned": "Shell scripting best practices and Linux automation."
+        },
+        "stack": ["Bash", "Linux", "Git"],
         "images": [
           "/images/arch-bootstrap-1.png",
           "/images/arch-bootstrap-2.png"
@@ -151,19 +198,62 @@
         "id": "dotfiles",
         "icon": "bi-gear-wide-connected",
         "title": "Dotfiles & Configurations",
-        "description": "A collection of personal dotfiles and configuration scripts for Linux and development environments. Includes settings for shell, editors, and various tools to boost productivity.",
+        "description": {
+          "problem": "Inconsistent dev environments across machines.",
+          "solution": "Maintained a central repository of dotfiles and config scripts.",
+          "result": "Consistent workflows and faster environment setup.",
+          "learned": "Version-controlling configs and cross-system compatibility."
+        },
+        "stack": ["Bash", "Linux", "Git"],
         "images": ["/images/dotfiles-1.png"],
         "github": "https://github.com/naordl/dotfiles"
       }
     ]
   },
+  "timeline": {
+    "title": "Timeline",
+    "journey": {
+      "title": "Skills Journey",
+      "events": [
+        {
+          "year": "2022",
+          "text": "Began learning the Linux OS and shell scripting."
+        },
+        {
+          "year": "2024",
+          "text": "Started learning cloud computing with AWS; built first CI/CD pipeline."
+        },
+        {
+          "year": "2024",
+          "text": "Deployed Kubernetes clusters on AWS EKS; learned monitoring with Prometheus & Grafana."
+        },
+        {
+          "year": "2025",
+          "text": "Started developing BaseCAT with full-stack architecture."
+        }
+      ]
+    },
+    "currentlyLearning": {
+      "title": "Currently Learning",
+      "items": [
+        "Terraform for multi-cloud deployments.",
+        "Ansible for further configuring multi-cloud systems."
+      ]
+    },
+    "nextSteps": {
+      "title": "Next Steps",
+      "items": [
+        "In the immediate future, I’m focused on securing my first role in DevOps where I can apply my skills, continue learning, and grow into a valuable team member."
+      ]
+    }
+  },
   "achievements": {
     "title": "Honours & Awards",
     "list": [
-      "1st Place – English Language & Literature Section — 27th Student Conference, PCU (2024)",
-      "1st Place – English Language & Literature Section — 25th Student Conference, PCU (2022)",
-      "Certificate of Contribution — Publicritic International Award & Exhibition (2023)",
-      "Certificate of Participation — ELT Regional Conference (2023)"
+      "1st Place – English Language & Literature Section — 27th Student Conference, PCU (2024) – Showcased technical research and presentation skills.",
+      "1st Place – English Language & Literature Section — 25th Student Conference, PCU (2022) – Recognized for clear communication and structured analysis.",
+      "Certificate of Contribution — Publicritic International Award & Exhibition (2023) – Translated and proofread multilingual materials.",
+      "Certificate of Participation — ELT Regional Conference (2023) – Engaged in teaching-related professional discussions."
     ]
   },
   "education": {
@@ -189,7 +279,7 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "If you’d like to request my full CV or talk about a potential opportunity, feel free to send me a message using the form below. I’ll get back to you as soon as I can.",
+    "description": "If you’d like to request my full CV or discuss a DevOps opportunity, send me a message below. I’m happy to explore how I can bring value to your team.",
     "form": {
       "name": "Your Name",
       "email": "Your Email",

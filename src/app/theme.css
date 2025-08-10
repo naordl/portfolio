@@ -184,7 +184,7 @@ section {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   margin-bottom: 0.5rem;
 }
@@ -246,14 +246,6 @@ section {
   opacity: 1;
 }
 
-/* Carousel indicators for light mode */
-.carousel-indicators [data-bs-target] {
-  background-color: var(--color-text) !important;
-  opacity: 0.5;
-}
-.carousel-indicators .active {
-  opacity: 1;
-}
 .modal-content {
   background: var(--color-bg) !important;
   color: var(--color-text) !important;
@@ -370,4 +362,20 @@ body {
 
 #lang-dropdown .lang-switch-label {
   color: var(--color-text) !important;
+}
+
+/* Custom blue badge for tech stack */
+.badge.tech-stack {
+  background-color: #2563eb !important;
+  color: #fff !important;
+  font-weight: 500;
+  border-radius: 0.5em;
+  margin-bottom: 0.25em;
+}
+
+.tech-stack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.5em; /* row-gap column-gap */
+  margin-bottom: 0.5em;
 }

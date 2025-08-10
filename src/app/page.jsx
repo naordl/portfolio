@@ -19,6 +19,7 @@ const sections = [
   "about",
   "skills",
   "projects",
+  "timeline",
   "achievements",
   "education",
   "publications",
@@ -29,6 +30,7 @@ const sectionIcons = {
   about: "bi-person-circle",
   skills: "bi-tools",
   projects: "bi-kanban",
+  timeline: "bi-clock-history",
   cat_tool: "bi-translate",
   achievements: "bi-trophy",
   education: "bi-mortarboard",
@@ -256,7 +258,22 @@ export default function Home() {
                     t("hero.languages.list", { returnObjects: true })
                   ) &&
                     t("hero.languages.list", { returnObjects: true }).map(
-                      (lang, idx) => <li key={idx}>{lang.label}</li>
+                      (lang, idx) => {
+                        // Split the label into language and proficiency (in parentheses)
+                        const match = lang.label.match(/^(.*?)(\s*\(.*\))$/);
+                        return (
+                          <li key={idx}>
+                            {match ? (
+                              <>
+                                {match[1]}
+                                <strong>{match[2]}</strong>
+                              </>
+                            ) : (
+                              lang.label
+                            )}
+                          </li>
+                        );
+                      }
                     )}
                 </ul>
               </div>
@@ -321,7 +338,31 @@ export default function Home() {
                       {project.title}
                     </h5>
                     <p className="project-card-description">
-                      {project.description}
+                      {typeof project.description === "object" ? (
+                        <>
+                          <strong>
+                            {t("projects.descriptionLabels.problem")}:
+                          </strong>{" "}
+                          {project.description.problem}
+                          <br />
+                          <strong>
+                            {t("projects.descriptionLabels.solution")}:
+                          </strong>{" "}
+                          {project.description.solution}
+                          <br />
+                          <strong>
+                            {t("projects.descriptionLabels.result")}:
+                          </strong>{" "}
+                          {project.description.result}
+                          <br />
+                          <strong>
+                            {t("projects.descriptionLabels.learned")}:
+                          </strong>{" "}
+                          {project.description.learned}
+                        </>
+                      ) : (
+                        project.description
+                      )}
                     </p>
                     <div className="project-card-bottom">
                       {project.github && (
@@ -387,15 +428,67 @@ export default function Home() {
                       ))}
                     </Carousel>
                   )}
-                <p>{selectedProject.description}</p>
-                {selectedProject.features &&
-                  Array.isArray(selectedProject.features) && (
-                    <ul>
-                      {selectedProject.features.map((feature, i) => (
-                        <li key={i}>{feature}</li>
-                      ))}
-                    </ul>
+
+                {selectedProject.stack &&
+                  Array.isArray(selectedProject.stack) && (
+                    <div className="mb-3">
+                      <strong>
+                        <i className="bi bi-layers me-2"></i>
+                        {t("projects.stackLabel")}
+                      </strong>
+                      <div className="mt-1">
+                        {selectedProject.stack.map((tech, idx) => (
+                          <span
+                            key={idx}
+                            className="badge tech-stack me-1"
+                            style={{ fontSize: "0.95em" }}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   )}
+
+                {selectedProject.description &&
+                typeof selectedProject.description === "object" ? (
+                  <div className="project-description-structured mb-3">
+                    {selectedProject.description.problem && (
+                      <div>
+                        <strong>
+                          {t("projects.descriptionLabels.problem")}:
+                        </strong>{" "}
+                        {selectedProject.description.problem}
+                      </div>
+                    )}
+                    {selectedProject.description.solution && (
+                      <div>
+                        <strong>
+                          {t("projects.descriptionLabels.solution")}:
+                        </strong>{" "}
+                        {selectedProject.description.solution}
+                      </div>
+                    )}
+                    {selectedProject.description.result && (
+                      <div>
+                        <strong>
+                          {t("projects.descriptionLabels.result")}:
+                        </strong>{" "}
+                        {selectedProject.description.result}
+                      </div>
+                    )}
+                    {selectedProject.description.learned && (
+                      <div>
+                        <strong>
+                          {t("projects.descriptionLabels.learned")}:
+                        </strong>{" "}
+                        {selectedProject.description.learned}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <p>{selectedProject.description}</p>
+                )}
                 {selectedProject.github && (
                   <a
                     href={selectedProject.github}
@@ -409,6 +502,77 @@ export default function Home() {
             </>
           )}
         </Modal>
+
+        {/* Timeline Section */}
+        <CardSection
+          id="timeline"
+          title={
+            <>
+              <i className="bi bi-clock-history me-2"></i>
+              {t("timeline.title")}
+            </>
+          }
+        >
+          <div className="row">
+            {/* Journey subcard */}
+            <div className="col-md-4 mb-3">
+              <div className="card h-100 p-3 subcard">
+                <h5 className="section-subtitle d-flex align-items-center">
+                  <i className="bi bi-flag me-2"></i>
+                  {t("timeline.journey.title")}
+                </h5>
+                <ul>
+                  {Array.isArray(
+                    t("timeline.journey.events", { returnObjects: true })
+                  ) &&
+                    t("timeline.journey.events", { returnObjects: true }).map(
+                      (entry, idx) => (
+                        <li key={idx}>
+                          <strong>{entry.year}:</strong> {entry.text}
+                        </li>
+                      )
+                    )}
+                </ul>
+              </div>
+            </div>
+            {/* Currently Learning subcard */}
+            <div className="col-md-4 mb-3">
+              <div className="card h-100 p-3 subcard">
+                <h5 className="section-subtitle d-flex align-items-center">
+                  <i className="bi bi-lightbulb me-2"></i>
+                  {t("timeline.currentlyLearning.title")}
+                </h5>
+                <ul>
+                  {Array.isArray(
+                    t("timeline.currentlyLearning.items", {
+                      returnObjects: true,
+                    })
+                  ) &&
+                    t("timeline.currentlyLearning.items", {
+                      returnObjects: true,
+                    }).map((item, idx) => <li key={idx}>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+            {/* Next Steps subcard */}
+            <div className="col-md-4 mb-3">
+              <div className="card h-100 p-3 subcard">
+                <h5 className="section-subtitle d-flex align-items-center">
+                  <i className="bi bi-arrow-right-circle me-2"></i>
+                  {t("timeline.nextSteps.title")}
+                </h5>
+                <ul>
+                  {Array.isArray(
+                    t("timeline.nextSteps.items", { returnObjects: true })
+                  ) &&
+                    t("timeline.nextSteps.items", { returnObjects: true }).map(
+                      (item, idx) => <li key={idx}>{item}</li>
+                    )}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </CardSection>
 
         {/* Achievements Section */}
         <CardSection
