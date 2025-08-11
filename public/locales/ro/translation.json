@@ -1,1 +1,294 @@
-{}
+{
+  "navbar": {
+    "about": "Despre",
+    "skills": "Competențe Profesionale",
+    "projects": "Proiecte",
+    "timeline": "Cronologie",
+    "achievements": "Distincții și Premii",
+    "education": "Educație",
+    "publications": "Publicații",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Nemes Roland",
+    "summary": "Inginer DevOps la început de carieră, cu experiență în proiectarea și operarea infrastructurilor robuste, automatizate și scalabile. Dispun cunoștințe semnificative în AWS, Kubernetes și Linux, completate de o experiență distinctă în lingvistică și traduceri. Am început parcursul în DevOps prin proiecte personale care au abordat provocări practice de implementare și automatizare. Sunt dedicat să unific procesele de dezvoltare și operare prin fluxuri de lucru optimizate, documentație tehnică precisă și un proces constant de îmbunătățire.",
+    "location": "Rezident în UE – disponibil pentru roluri remote sau hibride în Ungaria și România.",
+    "contacts": [
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/roland-nemes-089297330",
+        "icon": "bi-linkedin"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/naordl",
+        "icon": "bi-github"
+      }
+    ],
+    "languages": {
+      "title": "Limbi vorbite",
+      "list": [
+        { "label": "Maghiară (limbă maternă)" },
+        { "label": "Engleză (C2)" },
+        { "label": "Română (B2)" }
+      ]
+    }
+  },
+  "skills": {
+    "title": "Competențe Profesionale",
+    "list": [
+      {
+        "icon": "bi-cloud",
+        "title": "DevOps & Cloud",
+        "items": [
+          "Servicii AWS (IAM, EC2, S3, VPC, CloudFormation, CodePipeline, EKS) — utilizate pentru orchestrarea implementărilor automatizate și administrarea infrastructurii cloud la scară.",
+          "Kubernetes, Helm, Docker — utilizate pentru implementarea și gestionarea aplicațiilor containerizate cu scalabilitate ridicată.",
+          "Pipeline-uri CI/CD, Git, GitHub —  utilizate pentru cicluri de livrare accelerate și implementări sigure."
+        ]
+      },
+      {
+        "icon": "bi-hdd-network",
+        "title": "Linux",
+        "items": [
+          "Shell scripting (Bash, Posix) — automatizarea proceselor repetitive, reducând semnificativ timpul de lucru manual.",
+          "Cronjobs — configurarea sarcinilor programate pentru mentenanță periodică și backup-uri."
+        ]
+      },
+      {
+        "icon": "bi-code-slash",
+        "title": "Dezvoltare Software",
+        "items": [
+          "NodeJS",
+          "JavaScript, TypeScript",
+          "NextJS",
+          "React",
+          "Proiectarea și dezvoltarea aplicațiilor full-stack cu UI-uri responsive și back-end-uri performante."
+        ]
+      },
+      {
+        "icon": "bi-chat-dots",
+        "title": "Lingvistică și Comunicare",
+        "items": [
+          "Traducere și interpretariat (HU ⇆ EN ⇆ RO) — expertiză în comunicare în contexte multilingve.",
+          "Documentație tehnică, documentație API, revizie — redactare de documentație clară și detaliată pentru sisteme complexe.",
+          "MemoQ, Trados, Subtitle Edit — experiență avansată cu aplicații CAT profesionale."
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proiecte",
+    "stackLabel": "Tehnologii utilizate:",
+    "descriptionLabels": {
+      "problem": "Problemă",
+      "solution": "Soluție",
+      "result": "Rezultat",
+      "learned": "Ce am învățat"
+    },
+    "list": [
+      {
+        "id": "eks-quick-setup",
+        "icon": "bi-cloud-arrow-up",
+        "title": "Automatizare Implementare AWS EKS",
+        "description": {
+          "problem": "Configurarea manuală a infrastructurii era consumatoare de timp și predispusă la erori umane.",
+          "solution": "Dezvoltarea unui șablon AWS CloudFormation pregătit pentru producție, capabil să implementeze un cluster Kubernetes (EKS) scalabil, cu monitorizare integrată (Prometheus, Grafana) și pipeline CI/CD complet automatizat prin AWS CodePipeline și GitHub.",
+          "result": "Implementări cu zero timp de nefuncționare și reducerea timpului de provisioning de la câteva ore la câteva minute.",
+          "learned": "Aprofundarea conceptelor de infrastructură-ca-cod (IaC) și a fluxurilor de lucru complet automatizate."
+        },
+        "stack": [
+          "AWS",
+          "CloudFormation",
+          "CodePipeline",
+          "Kubernetes",
+          "Docker",
+          "Helm",
+          "Prometheus",
+          "Grafana",
+          "Git"
+        ],
+        "images": [
+          "/images/eks-quick-setup-1.png",
+          "/images/eks-quick-setup-2.png"
+        ],
+        "github": "https://github.com/naordl/eks-quick-setup"
+      },
+      {
+        "id": "basecat",
+        "icon": "bi-window",
+        "title": "BaseCAT – Aplicație CAT (în dezvoltare)",
+        "description": {
+          "problem": "Majoritatea aplicațiilor CAT existente sunt supraîncărcate cu funcții și oferă o experiență de utilizare greoaie pentru anumite categorii de traducători.",
+          "solution": "Proiectarea și implementarea unor aplicații CAT cross-platform, cu interfață minimalistă, autentificare securizată și funcționalități robuste de import/export.",
+          "result": "Optimizarea fluxurilor de lucru printr-o soluție mai suplă și mai eficientă pentru traducători.",
+          "learned": "Experiență practică în arhitectură full-stack, design de fluxuri de autentificare securizate și optimizare UI/UX pentru productivitate."
+        },
+        "stack": [
+          "Next.js",
+          "Electron",
+          "MongoDB",
+          "bcrypt",
+          "JWT",
+          "Keytar",
+          "Pandoc"
+        ],
+        "images": [
+          "/images/basecat-1.png",
+          "/images/basecat-2.png",
+          "/images/basecat-3.png",
+          "/images/basecat-4.png",
+          "/images/basecat-5.png"
+        ]
+      },
+      {
+        "id": "discuss",
+        "icon": "bi-chat-left-dots",
+        "title": "Clonă Reddit – Aplicație Full-Stack",
+        "description": {
+          "problem": "Necesitatea unui mediu de test pentru exersarea operațiunilor CRUD și a mecanismelor de autentificare end-to-end.",
+          "solution": "Dezvoltarea unei aplicații inspirate de Reddit, utilizând Next.js și SQLite.",
+          "result": "Platformă funcțională, cu autentificare utilizator, gestionare postări și comentarii.",
+          "learned": "Gestionarea securizată a datelor utilizatorilor, implementarea interfețelor responsive și validare avansată a formularelor pe backend."
+        },
+        "stack": ["Next.js", "SQLite", "TypeScript", "React", "TailwindCSS"],
+        "images": [
+          "/images/discuss-1.png",
+          "/images/discuss-2.png",
+          "/images/discuss-3.png"
+        ],
+        "github": "https://github.com/naordl/discuss"
+      },
+      {
+        "id": "ecomm",
+        "icon": "bi-bag-check",
+        "title": "E-Commerce Web App",
+        "description": {
+          "problem": "Necesitatea de a înțelege arhitectura API-urilor backend pentru fluxuri comerciale.",
+          "solution": "Implementarea unui backend pe bază de Express, pentru gestionarea catalogului de produse, a coșului de cumpărături și a procesului de checkout.",
+          "result": "Backend modular și scalabil, pregătit pentru integrarea cu interfața de utilizator.",
+          "learned": "Conceperea arhitecturii API și integrarea eficientă cu baze de date."
+        },
+        "stack": ["Node.js", "Express", "JavaScript"],
+        "images": ["/images/ecomm-1.png", "/images/ecomm-2.png"],
+        "github": "https://github.com/naordl/ecomm"
+      },
+      {
+        "id": "arch-bootstrap",
+        "icon": "bi-terminal-dash",
+        "title": "Bootstrapper Arch Linux",
+        "description": {
+          "problem": "Instalările recurente de Arch Linux necesitau timp considerabil.",
+          "solution": "Crearea unui script Bash pentru automatizarea completă a procesului de instalare și configurare.",
+          "result": "Reducerea dramatică a timpului de configurare și asigurarea consistenței mediilor de lucru.",
+          "learned": "Aplicarea celor mai bune practici în scripting Bash și automatizare Linux."
+        },
+        "stack": ["Bash", "Linux", "Git"],
+        "images": [
+          "/images/arch-bootstrap-1.png",
+          "/images/arch-bootstrap-2.png"
+        ],
+        "github": "https://github.com/naordl/arch-bootstrap"
+      },
+      {
+        "id": "dotfiles",
+        "icon": "bi-gear-wide-connected",
+        "title": "Dotfile-uri și Configurații",
+        "description": {
+          "problem": "Medii de dezvoltare inconsistente pe diferite sisteme.",
+          "solution": "Menținerea unui repository centralizat pentru dotfile-uri și scripturi de configurare.",
+          "result": "Mediu de lucru uniform și reducerea timpului de setare.",
+          "learned": "Controlul versiunilor pentru fișiere de configurare și compatibilitatea cross-platform."
+        },
+        "stack": ["Bash", "Linux", "Git"],
+        "images": ["/images/dotfiles-1.png"],
+        "github": "https://github.com/naordl/dotfiles"
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Cronologie",
+    "journey": {
+      "title": "Evoluția competențelor",
+      "events": [
+        {
+          "year": "2022-2023",
+          "text": "Am început să învăț sistemul de operare Linux și scripting în shell."
+        },
+        {
+          "year": "2024",
+          "text": "Am început să învăț cloud computing cu AWS; am creat primul pipeline CI/CD."
+        },
+        {
+          "year": "2024",
+          "text": "Am implementat clustere Kubernetes pe AWS EKS și am învățat monitorizare cu Prometheus & Grafana."
+        },
+        {
+          "year": "2025",
+          "text": "Am început dezvoltarea aplicației BaseCAT folosind arhitectură full-stack."
+        }
+      ]
+    },
+    "currentlyLearning": {
+      "title": "Ce învăț acum",
+      "items": [
+        "Terraform pentru implementări multi-cloud.",
+        "Ansible pentru configurarea sistemelor multi-cloud."
+      ]
+    },
+    "nextSteps": {
+      "title": "Pașii următori",
+      "items": [
+        "Obținerea primului rol de DevOps Engineer Entry-level/Junior, cu scopul de a aplica competențele actuale, a continua procesul de învățare și a contribui activ la succesul unei echipe."
+      ]
+    }
+  },
+  "achievements": {
+    "title": "Distincții și Premii",
+    "list": [
+      "Loc. I – Secțiunea Limba și Literatura Engleză — a 27-a Conferință Științifică a Cercului Studențesc (UCP 2024). – Demonstrarea competențelor de cercetare și prezentare.",
+      "Loc. I – Secțiunea Limba și Literatura Engleză — a 25-a Conferință Științifică a Cercului Studențesc (UCP 2022) – Recunoaștere pentru claritate și analiză structurată.",
+      "Certificat de Contribuție — Premiul și Expoziția Internațională Publicritic (2023) – Traducerea și corectura materialelor multilingve.",
+      "Certificat de Participare — Conferința Regională ELT (2023) – Implicare în discuții profesionale legate de domeniul educațional."
+    ]
+  },
+  "education": {
+    "title": "Educație",
+    "list": [
+      "Master – Traducere și Interpretariat — Universitatea Creștină Partium, Oradea (2022–2024)",
+      "Licență – Limba și Literatura Engleză — Universitatea Creștină Partium, Oradea (2019–2022)"
+    ]
+  },
+  "publications": {
+    "title": "Publicații",
+    "name": "„Mushroom Viewpoint” – O(u)radea, ghid turistic bilingv (EN & HU)",
+    "links": [
+      {
+        "label": "en.partium.ro/en/news/mushroom-viewpoint",
+        "url": "https://en.partium.ro/en/news/mushroom-viewpoint"
+      },
+      {
+        "label": "en.partium.ro/hu/hirek/gomba-kilato",
+        "url": "https://en.partium.ro/hu/hirek/gomba-kilato"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Dacă doriți să solicitați CV-ul meu complet sau să discutăm o oportunitate în domeniul DevOps, îmi puteți trimite un mesaj mai jos. Sunt deschis să discutăm despre modul în care aș putea contribui la succesul echipei dumneavoastră.",
+    "form": {
+      "name": "Numele dvs.",
+      "email": "Adresă de e-mail",
+      "message": "Conținutul mesajului",
+      "submit": "Trimite mesaj",
+      "success": "Mesajul a fost transmis cu succes. Vă mulțumesc!",
+      "error": "Eroare transmitere mesaj. Vă rog să încercați mai târziu.",
+      "validation": {
+        "required": "Toate câmpurile sunt obligatorii.",
+        "invalidEmail": "Vă rog să introduceți o adresă de e-mail corectă."
+      }
+    }
+  },
+  "ui": {
+    "showMore": "Afișează detalii"
+  }
+}
