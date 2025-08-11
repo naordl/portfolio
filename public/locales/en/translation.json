@@ -251,7 +251,7 @@
   "achievements": {
     "title": "Honours & Awards",
     "list": [
-      "1st Place – English Language & Literature Section — 27th Student Conference, PCU (2024) – Showcased technical research and presentation skills.",
+      "1st Place – English Language & Literature Section — 27th Student Conference, PCU (2024) – Showcased research and presentation skills.",
       "1st Place – English Language & Literature Section — 25th Student Conference, PCU (2022) – Recognized for clear communication and structured analysis.",
       "Certificate of Contribution — Publicritic International Award & Exhibition (2023) – Translated and proofread multilingual materials.",
       "Certificate of Participation — ELT Regional Conference (2023) – Engaged in teaching-related professional discussions."
@@ -286,7 +286,7 @@
       "email": "Your Email",
       "message": "Message",
       "submit": "Send Message",
-      "success": "Thank you! Your message has been sent.",
+      "success": "Your message has been sent successfully. Thank you!",
       "error": "Oops! Something went wrong. Please try again later.",
       "validation": {
         "required": "Please fill out all fields.",
