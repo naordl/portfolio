@@ -3,6 +3,7 @@
 import "./i18n";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import {
   Container,
   Nav,
@@ -100,21 +101,15 @@ export default function Home() {
     <>
       {/* Background video and overlay */}
       {!videoPlaying && (
-        <img
-          src="/background-fallback.png"
-          alt="Background fallback"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            objectFit: "cover",
-            zIndex: -2,
-            transition: "opacity 3s",
-            filter: darkMode ? undefined : "invert(1)",
-          }}
-        />
+        <div className="background-container">
+          <Image
+            src="/background-fallback.png"
+            alt="Background fallback"
+            fill
+            className="background-image"
+            style={{ filter: darkMode ? undefined : "invert(1)" }}
+          />
+        </div>
       )}
 
       {/* Background video */}
@@ -128,16 +123,8 @@ export default function Home() {
           preload="none"
           onPlay={handleVideoPlay}
           onError={handleVideoError}
+          className="background-video"
           style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100vw",
-            height: "100vh",
-            objectFit: "cover",
-            zIndex: -2,
-            opacity: 0.5,
-            transition: "opacity 3s",
             display: videoPlaying ? "block" : "none", // Only show video if playing
             filter: darkMode ? undefined : "invert(1)",
           }}
@@ -148,8 +135,7 @@ export default function Home() {
       <Navbar fixed="top" className="shadow-sm px-3">
         <div className="centered-navbar-content">
           <span
-            className="text-navbar-brand d-flex align-items-center"
-            style={{ fontWeight: 700 }}
+            className="text-navbar-brand d-flex align-items-center navbar-brand-strong"
           >
             <i className="bi bi-person-badge me-2"></i> {t("hero.name")}
           </span>
@@ -162,8 +148,7 @@ export default function Home() {
                   e.preventDefault();
                   scrollToSection(section);
                 }}
-                style={{ cursor: "pointer" }}
-                className="d-flex align-items-center"
+                className="d-flex align-items-center nav-link-pointer"
               >
                 <i className={`bi ${sectionIcons[section]} me-2`}></i>
                 {t(`navbar.${section}`)}
@@ -179,7 +164,7 @@ export default function Home() {
           </Button>
           <Dropdown>
             <Dropdown.Toggle variant="outline-secondary" id="lang-dropdown">
-              <span style={{ fontSize: "1.2em", marginRight: "0.5em" }}>
+              <span className="lang-flag">
                 {languages.find((l) => l.code === i18n.language)?.flag || "🏳️"}
               </span>
               <span className="lang-switch-label">
@@ -193,7 +178,7 @@ export default function Home() {
                   key={lang.code}
                   onClick={() => handleLangChange(lang.code)}
                 >
-                  <span style={{ fontSize: "1.2em", marginRight: "0.5em" }}>
+                  <span className="lang-flag">
                     {lang.flag}
                   </span>
                   <span className="lang-switch-label">{lang.label}</span>
@@ -203,7 +188,7 @@ export default function Home() {
           </Dropdown>
         </div>
       </Navbar>
-      <div style={{ paddingTop: 80 }}>
+      <div className="main-container">
         {/* About Section */}
         <section id="about" className="mb-5">
           <Container>
@@ -310,11 +295,7 @@ export default function Home() {
               projects.map((project, idx) => (
                 <div className="col-md-4 mb-3" key={project.id}>
                   <div
-                    className="card h-100 p-3 subcard project-card-hover"
-                    style={{
-                      cursor: "pointer",
-                      transition: "box-shadow 0.2s, transform 0.2s",
-                    }}
+                    className="card h-100 p-3 subcard project-card-hover project-card-pointer"
                     onClick={() => {
                       setSelectedProject(project);
                       setShowModal(true);
@@ -398,17 +379,14 @@ export default function Home() {
                     <Carousel fade interval={4000} className="mb-3">
                       {selectedProject.images.map((img, idx) => (
                         <Carousel.Item key={idx}>
-                          <img
+                          <Image
                             src={img}
                             alt={
                               selectedProject.title + " screenshot " + (idx + 1)
                             }
-                            className="d-block w-100 rounded project-modal-image"
-                            style={{
-                              maxHeight: 320,
-                              objectFit: "cover",
-                              cursor: "zoom-in",
-                            }}
+                            width={800}
+                            height={600}
+                            className="d-block w-100 rounded project-modal-image project-modal-carousel-image"
                             onClick={() => setEnlargedImage(img)}
                           />
                         </Carousel.Item>
@@ -428,7 +406,6 @@ export default function Home() {
                           <span
                             key={idx}
                             className="badge tech-stack me-1"
-                            style={{ fontSize: "0.95em" }}
                           >
                             {tech}
                           </span>
@@ -657,7 +634,7 @@ export default function Home() {
           <img
             src={enlargedImage}
             alt="Enlarged project screenshot"
-            className="lightbox-image"
+            className="lightbox-image-final"
             onClick={(e) => e.stopPropagation()}
           />
           <button

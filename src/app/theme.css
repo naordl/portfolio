@@ -167,9 +167,6 @@ section {
 
 .project-card-hover {
   transition: box-shadow 0.2s, transform 0.2s;
-  height: 250px;
-  min-height: 250px;
-  max-height: 250px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -272,11 +269,12 @@ section {
 [data-theme="dark"] .lightbox-overlay {
   background: rgba(0, 0, 0, 0.5); /* dark in dark mode */
 }
-.lightbox-image {
+.lightbox-image-final {
   max-width: 90vw;
   max-height: 90vh;
   box-shadow: 0 0 32px 8px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  object-fit: contain;
 }
 .lightbox-close {
   position: absolute;
@@ -371,6 +369,7 @@ body {
   font-weight: 500;
   border-radius: 0.5em;
   margin-bottom: 0.25em;
+  font-size: 1em;
 }
 
 .tech-stack-list {
@@ -378,4 +377,113 @@ body {
   flex-wrap: wrap;
   gap: 0.5em 0.5em; /* row-gap column-gap */
   margin-bottom: 0.5em;
+}
+
+.project-modal {
+  max-width: 800px;
+}
+
+.project-modal-content {
+  border-radius: 1rem;
+}
+
+.project-modal-image {
+  border-radius: 0.5rem;
+}
+
+.project-description-structured {
+  line-height: 1.7;
+}
+.project-description-structured > div {
+  margin-bottom: 0.5rem;
+}
+
+.text-navbar-brand {
+  color: var(--color-text) !important;
+}
+
+.btn-outline-secondary {
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+.btn-outline-secondary:hover {
+  background: var(--color-secondary) !important;
+}
+
+.btn-dark {
+  background: var(--color-secondary) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+.btn-dark:hover {
+  background: var(--color-border) !important;
+}
+
+.btn-outline-dark {
+  border-color: var(--color-border) !important;
+  color: var(--color-text) !important;
+}
+.btn-outline-dark:hover {
+  background: var(--color-secondary) !important;
+}
+
+.btn-primary {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Added for style cleanup */
+.background-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+.background-image {
+  object-fit: cover;
+  transition: opacity 3s;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.5;
+  transition: opacity 3s;
+}
+
+.navbar-brand-strong {
+  font-weight: 700;
+}
+
+.nav-link-pointer {
+  cursor: pointer;
+}
+
+.lang-flag {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+}
+
+.main-container {
+  padding-top: 80px;
+}
+
+.project-card-pointer {
+  cursor: pointer;
+}
+
+.project-modal-carousel-image {
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
 }
