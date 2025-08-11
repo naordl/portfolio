@@ -245,7 +245,7 @@
   "achievements": {
     "title": "Kitüntetések",
     "list": [
-      "1. hely – Angol nyelv és irodalom szekció — 27. Partiumi Tudományos Diákköri Konferencia, PKE (2024) – Műszaki kutatási és prezentációs készségek miatti elismerés.",
+      "1. hely – Angol nyelv és irodalom szekció — 27. Partiumi Tudományos Diákköri Konferencia, PKE (2024) – Kutatási és prezentációs készségek miatti elismerés.",
       "1. hely – Angol nyelv és irodalom szekció — 25. Partiumi Tudományos Diákköri Konferencia, PKE (2022) – Elismerés világos kommunikációért és strukturált elemzésért.",
       "Közreműködői Oklevél — Publicritic Nemzetközi Vizuális Kritikaformálói Díj és Kiállítás (2023) – Többnyelvű anyagok fordítása és lektorálása.",
       "Részvételi oklevél — ELT Regionális Konferencia (2023) – Részvétel tanítással kapcsolatos szakmai megbeszéléseken."
@@ -280,8 +280,8 @@
       "email": "E-mail cím",
       "message": "Üzenet",
       "submit": "Üzenet küldése",
-      "success": "Köszönöm! Az üzenet sikeresen elküldve.",
-      "error": "Hiba történt az üzenetküldés során. Kérlek, próbáld meg később.",
+      "success": "Az üzenet sikeresen elküldve. Köszönöm!",
+      "error": "Hiba történt az üzenet elküldése során. Kérem, próbálja újra később.",
       "validation": {
         "required": "Minden mező kitöltése kötelező.",
         "invalidEmail": "Kérem adjon meg egy érvényes e-mail címet."
