@@ -487,3 +487,12 @@ body {
   height: auto;
   cursor: zoom-in;
 }
+
+.project-card-vercel {
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.project-modal-content a {
+  text-decoration: none;
+}
