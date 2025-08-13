@@ -134,9 +134,7 @@ export default function Home() {
 
       <Navbar fixed="top" className="shadow-sm px-3">
         <div className="centered-navbar-content">
-          <span
-            className="text-navbar-brand d-flex align-items-center navbar-brand-strong"
-          >
+          <span className="text-navbar-brand d-flex align-items-center navbar-brand-strong">
             <i className="bi bi-person-badge me-2"></i> {t("hero.name")}
           </span>
           <Nav className="centered-navbar-nav">
@@ -178,9 +176,7 @@ export default function Home() {
                   key={lang.code}
                   onClick={() => handleLangChange(lang.code)}
                 >
-                  <span className="lang-flag">
-                    {lang.flag}
-                  </span>
+                  <span className="lang-flag">{lang.flag}</span>
                   <span className="lang-switch-label">{lang.label}</span>
                 </Dropdown.Item>
               ))}
@@ -346,6 +342,20 @@ export default function Home() {
                           <i className="bi bi-github me-1"></i>GitHub
                         </a>
                       )}
+                      {project.vercel && (
+                        <a
+                          href={project.vercel}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="project-card-vercel"
+                          aria-label="Vercel"
+                          title="Live Demo"
+                        >
+                          <i className="bi bi-triangle-fill me-1"></i>
+                          Vercel
+                        </a>
+                      )}
                       <span className="project-card-showmore">
                         {showMoreLabel}
                       </span>
@@ -403,10 +413,7 @@ export default function Home() {
                       </strong>
                       <div className="mt-1">
                         {selectedProject.stack.map((tech, idx) => (
-                          <span
-                            key={idx}
-                            className="badge tech-stack me-1"
-                          >
+                          <span key={idx} className="badge tech-stack me-1">
                             {tech}
                           </span>
                         ))}
@@ -453,15 +460,29 @@ export default function Home() {
                 ) : (
                   <p>{selectedProject.description}</p>
                 )}
-                {selectedProject.github && (
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <i className="bi bi-github me-1"></i>GitHub
-                  </a>
-                )}
+                <div
+                  className="d-flex align-items-center mt-3"
+                  style={{ gap: "16px" }}
+                >
+                  {selectedProject.github && (
+                    <a
+                      href={selectedProject.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-github me-1"></i>GitHub
+                    </a>
+                  )}
+                  {selectedProject.vercel && (
+                    <a
+                      href={selectedProject.vercel}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i className="bi bi-triangle-fill me-1"></i>Vercel
+                    </a>
+                  )}
+                </div>
               </Modal.Body>
             </>
           )}

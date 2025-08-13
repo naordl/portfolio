@@ -162,7 +162,8 @@
           "/images/discuss-2.png",
           "/images/discuss-3.png"
         ],
-        "github": "https://github.com/naordl/discuss"
+        "github": "https://github.com/naordl/discuss",
+        "vercel": "https://naordl-discuss.vercel.app/"
       },
       {
         "id": "ecomm",
