@@ -116,7 +116,7 @@
       {
         "id": "basecat",
         "icon": "bi-window",
-        "title": "BaseCAT – CAT fordítástámogató eszköz (fejlesztés alatt)",
+        "title": "BaseCAT – CAT eszköz (fejlesztés alatt)",
         "description": {
           "problem": "A jelenlegi fordítástámogató rendszerek sok felhasználó számára túlzsúfoltak és kevéssé intuitívak.",
           "solution": "Többplatformos Computer Assisted Translation alkalmazás fejlesztése letisztult felhasználói felülettel, biztonságos felhasználói belépés mechanizmusokkal és hatékony import/export képességekkel.",
